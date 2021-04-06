@@ -21,6 +21,16 @@ In this assignment you are to take the starter code and
 
 
 
+## procudure
+
+1. Copy or fork the starter code from this repository  `https://github.com/dburchill/CoinTrackerAssignment.git`  into a public repository in your own github account. 
+2. Do the assignmnet and commit on the Main branch in your repository 
+3. Submit a text file to this dropbox with a link to your repository (include the commit number you want me to grade if it's not the last commit on the main branch)
+
+
+
+
+
 The starter code uses the free tier of the ConeMarketCap API, you will need to go to [Coin Market Cap]( https://coinmarketcap.com/api/pricing/ ) and request an API Key for the free tier and change the line
 
  `private const val YOUR_API_KEY = "81c565ce-9f80-4d9a-816f-0e216ca23013"`
@@ -31,8 +41,12 @@ The starter code uses the free tier of the ConeMarketCap API, you will need to g
 
 ### Notes
 
-When writing an app that consumes an API, especily a third party API 
+* The starter code uses the free tier of the ConeMarketCap API, you will need to go to [Coin Market Cap]( https://coinmarketcap.com/api/pricing/ ) and request an API Key for the free tier and change the line  `private const val YOUR_API_KEY = "81c565ce-9f80-4d9a-816f-0e216ca23013"` to use your key instead of the one included in the starter file. 
+* The key in the starter file may work for a while, but there is a limited number of free requests that can be made per day wich will quickly run out if everyone uses the same key. 
 
-* You should start by looking at the API's how to [guides](https://coinmarketcap.com/api/documentation/v1/) and using a tool like Postman to query the API and see what the JSON it returns looks like and what filter options are available. 
-* You can try out the free "JSON to Kotlin Class" plugin, you can install it from plugin marketplace from the project settings / plugins  in your Android Studio IDE.
+
+
+* When writing an app that consumes an API, especily a third party API 
+  * You should start by looking at the API's how to [guides](https://coinmarketcap.com/api/documentation/v1/) and using a tool like Postman to query the API and see what the JSON it returns looks like and what filter options are available. 
+  * You can try out the free "JSON to Kotlin Class" plugin, you can install it from plugin marketplace from the project settings / plugins  in your Android Studio IDE.
 
