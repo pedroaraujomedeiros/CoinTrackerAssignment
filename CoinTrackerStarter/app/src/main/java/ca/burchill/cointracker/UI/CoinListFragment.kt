@@ -12,6 +12,7 @@ import ca.burchill.cointracker.databinding.FragmentCoinListBinding
 import ca.burchill.cointracker.viewModels.CoinListViewModel
 
 
+
 class CoinListFragment : Fragment() {
 
     private val viewModel: CoinListViewModel by lazy {
@@ -37,6 +38,7 @@ class CoinListFragment : Fragment() {
                 adapter.submitList(it)
             }
         })
+
         return  binding.root
     }
 

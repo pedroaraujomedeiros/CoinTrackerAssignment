@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ca.burchill.cointracker.R
 import ca.burchill.cointracker.databinding.CoinItemBinding
-import ca.burchill.cointracker.network.NetworkCoin
+import ca.burchill.cointracker.domain.Coin
 
-class CoinListAdapter : ListAdapter<NetworkCoin, CoinListAdapter.ViewHolder>(CoinDiffCallback()) {
+class CoinListAdapter : ListAdapter<Coin, CoinListAdapter.ViewHolder>(CoinDiffCallback()) {
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -26,8 +26,8 @@ class CoinListAdapter : ListAdapter<NetworkCoin, CoinListAdapter.ViewHolder>(Coi
 
     class ViewHolder private constructor(val binding: CoinItemBinding) : RecyclerView.ViewHolder( binding.root) {
 
-        fun bind(item: NetworkCoin) {
-            binding.coin  = item
+        fun bind(item: Coin) {
+            binding.coin = item
         }
 
         companion object {
@@ -41,10 +41,10 @@ class CoinListAdapter : ListAdapter<NetworkCoin, CoinListAdapter.ViewHolder>(Coi
     }
 }
 
-class CoinDiffCallback : DiffUtil.ItemCallback<NetworkCoin>() {
-    override fun areItemsTheSame(oldItem: NetworkCoin, newItem: NetworkCoin) =
+class CoinDiffCallback : DiffUtil.ItemCallback<Coin>() {
+    override fun areItemsTheSame(oldItem: Coin, newItem: Coin) =
         newItem.id == oldItem.id
 
-    override fun areContentsTheSame(oldItem: NetworkCoin, newItem: NetworkCoin) =
+    override fun areContentsTheSame(oldItem: Coin, newItem: Coin) =
         newItem == oldItem
 }
